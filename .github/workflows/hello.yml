@@ -11,10 +11,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Create file
-        run: |
-          echo "Hello from GitHub Actions!" > hello.txt
-          cat hello.txt
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
 
-      - name: List files
-        run: ls -la
+      - name: Check Node and npm versions
+        run: |
+          node -v
+          npm -v
