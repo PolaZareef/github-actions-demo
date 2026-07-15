@@ -1,21 +1,20 @@
-name: Hello World
+name: Test Workflow
 
 on:
   push:
 
 jobs:
-  hello:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Say Hello
-        run: echo "Hello from GitHub Actions!"
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Print date
-        run: date
-
-      - name: Show current directory
-        run: pwd
+      - name: Create file
+        run: |
+          echo "Hello from GitHub Actions!" > hello.txt
+          cat hello.txt
 
       - name: List files
         run: ls -la
