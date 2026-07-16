@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+
+    "generate-build-info": "node scripts/generate-build-info.js",
+    "inject-build-info": "node scripts/inject-build-info.js"
   },
   "devDependencies": {
     "vite": "^8.1.1"
