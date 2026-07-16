@@ -3,14 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/styles/build-info.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>github-actions-demo</title>
   </head>
   <body>
-    <p id="build-version">Version: __VERSION__</p>
+  <div class="container">
+    <h1>🚀 GitHub Actions Demo</h1>
 
-    <p id="build-time">Built: __BUILD_TIME__</p>
+    <div class="card">
+      <h2>Build Information</h2>
+
+      <p>
+        <strong>Version</strong><br />
+        <span id="build-version">__VERSION__</span>
+      </p>
+
+      <p>
+        <strong>Build Time</strong><br />
+        <span id="build-time">__BUILD_TIME__</span>
+      </p>
+    </div>
+
     <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>
