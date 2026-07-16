@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -34,7 +34,7 @@ jobs:
         run: node scripts/generate-build-info.js
 
       - name: Inject Build Info Into Website
-        run: scripts/inject-build-info.js
+        run: node scripts/inject-build-info.js
 
       - name: Build
         run: npm run build
