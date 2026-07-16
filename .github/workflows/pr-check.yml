@@ -23,6 +23,3 @@ jobs:
 
       - name: Build Project
         run: npm run build
-
-      - name: Simulate Failure
-        run: exit 1
