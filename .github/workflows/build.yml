@@ -33,6 +33,9 @@ jobs:
       - name: Generate Build Info
         run: node scripts/generate-build-info.js
 
+      - name: Inject Build Info Into Website
+        run: scripts/inject-build-info.js
+
       - name: Build
         run: npm run build
 
