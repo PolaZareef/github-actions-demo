@@ -1,0 +1,12 @@
+name: Test Failure
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-failure:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Force failure
+        run: exit 1
